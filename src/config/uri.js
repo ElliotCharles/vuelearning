@@ -1,0 +1,1 @@
+let PROFIX = process.env.VUE_APP_API_PREFIX
