@@ -12,6 +12,8 @@
 </template>
 
 <script>
+import axios from "axios"
+import uri from "@/config/uri"
 import Vue from 'vue';
 import { Tabbar, TabbarItem } from 'vant';
 
@@ -23,6 +25,11 @@ export default {
       active: 0,
     };
   },
+  mounted(){
+      this.$http.get(uri.getHome).then(res=>{
+          console.log(res);
+      })
+  }
 }
 </script>
 
