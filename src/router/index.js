@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Layout from "@/Layout"
+import homeRoutes from './modules/home'
+
 
 import categoryRoutes from "./category/category"
 Vue.use(VueRouter)
@@ -8,11 +9,10 @@ Vue.use(VueRouter)
 const routes = [
  {
    path:"/",
-   component:Layout,
-   children:[
-    ...categoryRoutes
-   ]
+   redirect:"/index",
 },
+// 电影模块
+...homeRoutes
 
 ]
 
