@@ -1,1 +1,7 @@
-let PROFIX = process.env.VUE_APP_API_PREFIX
+let prefix = process.env.VUE_APP_API_PREFIX
+
+let uri = {
+    getHome:prefix + "/index/index"
+}
+
+export default uri
