@@ -1,9 +1,10 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import homeRoutes from './modules/home'
-
-
-import categoryRoutes from "./category/category"
+import categoryRoutes from "./modules/category"
+import cartRoutes from "./modules/cart"
+import userRoutes from "./modules/user"
+import topicRoutes from "./modules/topic"
 Vue.use(VueRouter)
 
 const routes = [
@@ -12,7 +13,11 @@ const routes = [
    redirect:"/index",
 },
 // 电影模块
-...homeRoutes
+...homeRoutes,
+...categoryRoutes,
+...cartRoutes,
+...topicRoutes,
+...userRoutes,
 
 ]
 

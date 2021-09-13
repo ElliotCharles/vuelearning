@@ -1,11 +1,10 @@
-import index from "@/views/home/index"
+import home from "@/views/home/index"
 
 const homeRoutes=[
     {
     path:"/index",
-    component:index
+    component:home
     }
 ]
-
 
 export default homeRoutes;

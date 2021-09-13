@@ -6,32 +6,39 @@
   "description": "",
   "glyphs": [
     {
-      "icon_id": "11372734",
-      "name": "影院",
-      "font_class": "yingyuan",
-      "unicode": "e8c0",
-      "unicode_decimal": 59584
+      "icon_id": "11927584",
+      "name": "我 的",
+      "font_class": "wode3",
+      "unicode": "f2f9",
+      "unicode_decimal": 62201
     },
     {
-      "icon_id": "11391538",
-      "name": "我的",
-      "font_class": "wode",
-      "unicode": "e639",
-      "unicode_decimal": 58937
+      "icon_id": "12970861",
+      "name": "购物车-23",
+      "font_class": "qicheqianlian-",
+      "unicode": "e505",
+      "unicode_decimal": 58629
     },
     {
-      "icon_id": "12387155",
-      "name": "资讯",
-      "font_class": "zixun",
-      "unicode": "e90d",
-      "unicode_decimal": 59661
+      "icon_id": "14693936",
+      "name": "专题",
+      "font_class": "zhuanti",
+      "unicode": "e6a6",
+      "unicode_decimal": 59046
     },
     {
-      "icon_id": "19989999",
-      "name": "电影",
-      "font_class": "dianying",
-      "unicode": "e7d3",
-      "unicode_decimal": 59347
+      "icon_id": "14856574",
+      "name": "首 页",
+      "font_class": "shouye",
+      "unicode": "e620",
+      "unicode_decimal": 58912
+    },
+    {
+      "icon_id": "18053306",
+      "name": "分类",
+      "font_class": "category",
+      "unicode": "e502",
+      "unicode_decimal": 58626
     }
   ]
 }
