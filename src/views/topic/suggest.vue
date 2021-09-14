@@ -2,14 +2,15 @@
   <div>
       <div class="historysearch">
   <h3>历史记录</h3>
-  <van-tag color="#7232dd" v-for="item in list.historyKeywordList" :key="item.id" plain class="historytag" @click="click(item)">{{item}}</van-tag>
-</div>
+  <van-tag color="#225555" v-for="item in list.historyKeywordList" :key="item.id" plain class="historytag" @click="click(item)">{{item}}</van-tag>
+
   <h3>热门搜索</h3>
-<div class="hotsearch"  v-for="item in list.hotKeywordList" :key="item.id">
-  <van-tag color="#ccc" v-if="is_hot = 1" plain class="hottag" @click="click(item.keyword)">{{item.keyword}}</van-tag>
-  <!-- <van-tag color="#7232dd" v-if="is_hot = 0" plain class="hottag" @click="click(item.keyword)">{{item.keyword}}</van-tag> -->
+<span class="hotsearch"  v-for="item in list.hotKeywordList" :key="item.id">
+  <van-tag color="#ff2233" v-if="item.is_hot" plain class="hottag" @click="click(item.keyword)">{{item.keyword}}</van-tag>
+  <van-tag color="#225555" v-else plain class="hottag" @click="click(item.keyword)">{{item.keyword}}</van-tag>
+</span>
 </div>
-  </div>
+</div>
 </template>
 
 <script>
@@ -29,15 +30,12 @@ list:{
     },
 methods:{
     click(item){
-      console.log(item);
-      this.$http.get(uri.getGoodlist + "?"+item).then(res=>{
-      this.$emit(placeholder,item)
-      })
+      this.$store.commit('setKeyword',item)
+      this.$router.push("/topic/drop?value="+item)
     }
 },
 created(){
     this.$http.get(uri.getPop).then(res=>{
-      console.log(res.data.data);
       this.list = res.data.data;
     })
     
@@ -45,6 +43,17 @@ created(){
 }
 </script>
 
-<style>
-
+<style scoped>
+.historysearch{
+margin:10px 20px ;
+}
+.hotsearch{
+  margin:0px 0px ;
+}
+.historytag{
+  margin:0px 2px
+}
+.hottag{
+  margin:0px 2px
+}
 </style>

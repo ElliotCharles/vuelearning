@@ -40,7 +40,7 @@ export default {
         };
     },
     created(){
-        let b = this.pathCollect.indexOf(this.$route.path)
+        let b = this.pathCollect.indexOf(this.$route.matched[0].path)
         this.active = b
     }
 }
