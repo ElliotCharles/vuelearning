@@ -31,7 +31,7 @@ list:{
 methods:{
     click(item){
       this.$store.commit('setKeyword',item)
-      this.$router.push("/topic/drop?value="+item)
+      this.$router.push("/topic/drop?keyword="+item)
     }
 },
 created(){

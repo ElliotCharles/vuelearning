@@ -9,7 +9,7 @@
     @cancel="onCancel"
   />
 </form>
-<router-view></router-view>
+<router-view ref="ppp"></router-view>
   </div>
 </template>
 
@@ -22,7 +22,7 @@ Vue.use(Search);
 export default {
   data() {
     return {
-      value: '',
+      value: "",
       list:{
       defaultKeyword:{},
       historyKeywordList:{},
@@ -31,9 +31,22 @@ export default {
      
     };
   },
+  watch: {
+    $route(val){
+      this.value = val.query.keyword
+    }
+  },
   methods: {
     onSearch(val) {
-      this.$router.push("/topic/drop?value=" + val)
+      if(this.$route.path == "/topic/drop"){
+        this.$refs.ppp.getGoodsInfo()
+       
+      }else{
+         this.$router.push("/topic/drop?keyword="+val)
+       
+      } 
+      this.$store.commit('setKeyword',val)
+      // console.log(this.$store.state.searchKeyword)
     },
     onCancel(){
       this.$router.push("/topic/suggest")
@@ -42,6 +55,7 @@ export default {
     //   this.value=n
     // }
   },
+  
   // updated(){
     // this.value = this.$store.state.searchKeyword
   // },

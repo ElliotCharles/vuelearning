@@ -50,8 +50,8 @@ export default {
   },
   methods:{
     getGoodsInfo(){
-      console.log("aa")
-      this.$http.get(uri.getGoodlist +"?"+this.$route.query.value).then(res=>{
+      console.log("getinfo  请求")
+      this.$http.get(uri.getGoodlist +"?keyword="+this.$store.state.searchKeyword).then(res=>{
               this.goodlist = res.data.data.data
             })
     }
