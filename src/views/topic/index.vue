@@ -50,15 +50,10 @@ export default {
     },
     onCancel(){
       this.$router.push("/topic/suggest")
-    }    
-    // getValue:function(n){
-    //   this.value=n
-    // }
+    },
+    
   },
   
-  // updated(){
-    // this.value = this.$store.state.searchKeyword
-  // },
 }
 </script>
 
