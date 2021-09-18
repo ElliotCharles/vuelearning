@@ -6,7 +6,7 @@
         <van-dropdown-item v-model="value3" :options="option3" title="分类"/>
     </van-dropdown-menu>
     <van-grid :column-num="2" :border="false" >
-      <van-grid-item v-for="item in goodlist" :key="item.id" :to="`/goods/related?id=${item.id}`"> 
+      <van-grid-item v-for="item in goodlist" :key="item.id" :to="`/detail?id=${item.id}`"> 
         <van-image class="img1" :src="item.list_pic_url" />
         <span class="span1">{{item.name}}</span>
         <span class="span2">{{item.retail_price}}元</span>
@@ -52,7 +52,7 @@ export default {
     getGoodsInfo(){
       console.log("getinfo  请求")
       this.$http.get(uri.getGoodlist +"?keyword="+this.$store.state.searchKeyword).then(res=>{
-              this.goodlist = res.data.data.data
+              this.goodlist = res.data.data
             })
     }
   },

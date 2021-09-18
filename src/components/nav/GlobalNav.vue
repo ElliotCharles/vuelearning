@@ -1,15 +1,15 @@
 <template>
-  <div>
-    <van-tabbar v-model="active" active-color="#8e322a" inactive-color="#4a4b4a">
+  <div> 
+    <van-tabbar v-model="active" active-color="#8e322a" inactive-color="#4a4b4a" >
         <van-tabbar-item replace to="/index">
             <van-icon slot="icon" size="20" class="iconfont">&#xe620;</van-icon>
             <span>首页</span>
         </van-tabbar-item>
         <van-tabbar-item replace to="/topic/suggest">
             <van-icon slot="icon" size="20" class="iconfont">&#xe6a6;</van-icon>
-            <span>专题</span>
+            <span>搜索</span>
         </van-tabbar-item>
-        <van-tabbar-item  replace to="/category">
+        <van-tabbar-item  replace to="/categorys">
             <van-icon slot="icon" size="20" class="iconfont">&#xe502;</van-icon>
             <span>分类</span>
         </van-tabbar-item>
@@ -27,6 +27,7 @@
 
 <script>
 import Vue from "vue";
+import {mapMutations} from "vuex"
 import { Tabbar, TabbarItem, Icon } from "vant";
 import "@/assets/iconfont/iconfont.css";
 Vue.use(Tabbar);
@@ -42,7 +43,7 @@ export default {
     created(){
         let b = this.pathCollect.indexOf(this.$route.matched[0].path)
         this.active = b
-    }
+    },
 }
 </script>
 

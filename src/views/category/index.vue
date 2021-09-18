@@ -31,14 +31,14 @@ export default {
       let id = this.categoryList[index].id
       // console.log(id)
       this.$http.get(uri.getCatelog + "?id=" + id).then(res=>{
-        this.currentCategory = res.data.data.currentCategory
+        this.currentCategory = res.data.currentCategory
       })
     },
   },
   created(){
      this.$http.get(uri.getCategory).then(res=>{
-       this.categoryList = res.data.data.categoryList
-       this.currentCategory = res.data.data.currentCategory
+       this.categoryList = res.data.categoryList
+       this.currentCategory = res.data.currentCategory
      })
   }
   

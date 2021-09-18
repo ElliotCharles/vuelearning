@@ -5,11 +5,15 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    searchKeyword:''
+    searchKeyword:'',
+    isShow:true
   },
   mutations: {
     setKeyword(state,keyword){
         state.searchKeyword = keyword
+    },
+    setIsShow(state,param){
+      state.isShow = param
     }
   },
   actions: {

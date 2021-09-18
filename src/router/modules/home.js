@@ -1,10 +1,15 @@
-import home from "@/views/home/index"
-
+import index from "@/views/home/index"
+import categoryList from "@/views/home/channelList"
 const homeRoutes=[
     {
     path:"/index",
-    component:home
+    component:index
+    },
+    {
+    path:"/category",
+    component:categoryList,
     }
 ]
+
 
 export default homeRoutes;

@@ -40,7 +40,7 @@ methods:{
 },
 created(){
     this.$http.get(uri.getPop).then(res=>{
-      this.list = res.data.data;
+      this.list = res.data;
     })
     
   }

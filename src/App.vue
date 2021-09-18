@@ -1,7 +1,7 @@
 <template>
   <div> 
     <router-view/>
-    <global-nav></global-nav>
+    <global-nav v-show="$store.state.isShow"></global-nav>
   </div>
 </template>
 <script>
@@ -16,5 +16,8 @@ export default {
 }
 </script>
 <style>
-
+*{
+  margin: 0;
+  padding: 0;
+}
 </style>
