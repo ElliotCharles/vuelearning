@@ -6,7 +6,8 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     searchKeyword:'',
-    isShow:true
+    isShow:true,
+    capKey:""
   },
   mutations: {
     setKeyword(state,keyword){
@@ -14,6 +15,9 @@ export default new Vuex.Store({
     },
     setIsShow(state,param){
       state.isShow = param
+    },
+    setCapKey(state,payload){
+      state.capKey = payload
     }
   },
   actions: {

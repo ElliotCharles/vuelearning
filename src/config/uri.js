@@ -13,7 +13,8 @@ let uri = {
     getGoodlist:prefix + "/goods/list",
     cleanHistory:prefix + "/search/clearhistory",
     getCategory:prefix+"/catalog/index",
-    getCatelog:prefix+"/catalog/current"
+    getCatelog:prefix+"/catalog/current",
+    postLogin:prefix+"/login"
 }
 
 export default uri

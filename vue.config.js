@@ -8,13 +8,29 @@ module.exports = {
         overlay: false,
         // vue项目代理请求
         proxy: {
-            "/api": {
+            "/aapi": {
                 target: "http://kumanxuan1.f3322.net:8001/",
                 changeOrigin: true,
                 pathRewrite: {
-                    "^/api": "",
-                },
+                    "/aapi": "",
+                },    
+            }
+            ,
+            "/bpi": {
+                target: "https://reactapi.iynn.cn/",
+                changeOrigin: true,
+                pathRewrite: {
+                    "^/bpi": "",
+                },    
+            },
+            "/cpi": {
+                target: "https://m.28sjw.com/",
+                changeOrigin: true,
+                pathRewrite: {
+                    "^/cpi": "",
+                },    
             },
         },
+        
     },
 };

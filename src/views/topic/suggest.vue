@@ -34,7 +34,8 @@ methods:{
       this.$router.push("/topic/drop?keyword="+item)
     },
     onClean(){
-      this.$http.get(uri.cleanHistory).then(location.reload())
+      // this.$http.get(uri.cleanHistory).then(location.reload())
+      console.log('clean history api is broken')
 
     }   
 },
